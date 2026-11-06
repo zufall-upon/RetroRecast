@@ -34,3 +34,12 @@ DXVKのzlib/libpng条件は利用・改変・再配布を許可し、元作者�
 `assets/church-input-output.png` は本人が指定した既存Windows教会比較の一枚で、左がKF1のworld入力、右が同じrequestの量子化CARLA2Flux出力です。研究対象と構造保持の限界を論評するため、README本文と区別した比較引用として掲載します。最終合成画面・新しい実験・品質改善の証拠にはしません。
 
 ゲーム画面の権利はTripwire Interactiveほかにあり、当projectのコードlicenseで再許諾しません。[TripwireのGameplay and Related Videos policy](https://tripwireinteractive.com/gameplay-and-related-videos-policy)は非商用・無料閲覧・ゲームへの関連・クレジットを条件として動画等の使用を案内しています。ただし、このポリシーを静止画・AI出力の包括的ライセンスと読み替えていません。ここでは無料・非商用の研究比較引用の最小限の一枚に限定し、ゲーム資産そのものの再配布や素材集にはしません。画像の再利用は各自の法域・提供元条件に従ってください。Tripwire/REGEN等の公認・権利侵害不存在・AI出力の権利確定を保証しません。問題の連絡はGitHub Issueへお願いします。
+
+<a name="gameplay-video"></a>
+## Gameplay video / 実プレイ動画 / 游戏视频
+
+- **Killing Floor (2009) © Tripwire Interactive and other rights holders.** The 60-second KF1 Revival / RetroRecast PV is an owner-authorized, free-to-view, non-commercial research preview edited from two existing Windows gameplay recordings. Tripwire's [gameplay video policy](https://tripwireinteractive.com/gameplay-and-related-videos-policy) permits credited, game-related, non-commercial videos; this does not grant ownership of game assets or blanket rights to AI outputs/models. No music, voice or other audio stream is included; no new gameplay was recorded for this page.
+- The original PV remains unchanged: **60.000 seconds, 1920×1080, encoded at 60 fps, 141,045,476 bytes; SHA-256 `58eda100bfc208671292d5c3728e772d8c6fe382ec4fece1df21accfa94cff50`**. The on-screen historical “private preview / in development” title is retained. A smaller web viewing copy may reduce resolution/frame rate; neither encoding is an AI inference benchmark.
+- The PV uses six normal-speed cuts from two separate recordings. Their model/processing settings are unidentified; they are not “original versus AI,” a continuous three-minute playthrough, or proof of the released model's performance. It includes experimental AI-rendered visuals from real gameplay, not newly generated fictional gameplay. Visual artifacts, performance issues and dark-scene limitations remain.
+- **日本語：** 本人が公開を依頼した既存60秒PVを、無料・非商用・出典付きで掲載します。音声streamはなく、原本・受領録画を保全しています。私有の会話・ログ・ソース履歴は公開しません。ゲーム映像・量子化AI画像・モデル・コードの権利は別で、コードlicenseの対象ではありません。
+- **简体中文：** 该60秒PV来自所有者授权分享的既有录像，免费、非商业展示并保留游戏署名，无音频流。保留原件，不公开私有会话或历史。游戏视频、AI图片、模型和代码的权利各自独立，不能以代码许可证重新授权。

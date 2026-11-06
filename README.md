@@ -1,44 +1,61 @@
 # RetroRecast
 
-### 昔のゲームを、元の遊びを残したまま新しい映像へ。
+### Experimental neural rendering for classic PC games — demonstrated on AMD Radeon.
 
-Experimental neural rendering for classic PC games — **最初の実証対象は Killing Floor (2009)**。
+**English** · [日本語](README.ja.md) · [简体中文](README.zh-CN.md)
 
-![KF1教会：左は元描画入力、右は同じrequestに対応する量子化AI出力](assets/church-input-output.png)
+[![Pre-release: v0.1.0-alpha](https://img.shields.io/badge/pre--release-v0.1.0--alpha-orange)](#download)
+[![AMD Radeon: limited proof of concept](https://img.shields.io/badge/AMD_Radeon-limited_PoC-ED1C24)](#evidence)
+[![First target: Killing Floor 2009](https://img.shields.io/badge/first_target-Killing_Floor_2009-blue)](#demonstration)
+[![Code: GPL-3.0-or-later and component licenses](https://img.shields.io/badge/code-GPL--3.0--or--later-617C42)](LICENSE_SCOPE.md)
 
-**教会の実input / output比較。** 左：元ゲームのworld入力。右：同一requestに対応するCARLA2Fluxの量子化AI出力。**最終ゲーム画面同士のBefore/Afterではありません。** 新しく生成・撮影した画像ではなく、既存Windows実験の保存結果です。
+[**GAMEPLAY**](#gameplay) · [**DOWNLOAD ALPHA**](#download) · [**SOURCE / BUILD**](BUILDING.md) · [**KNOWN ISSUES**](KNOWN_ISSUES.md)
 
-右側では明るさ・表面の見え方が大幅に変化する一方、元の構造や材質が忠実に保たれる保証はありません。見栄えの変化と構造保持は別の課題です。この一枚は暗所改善や時間安定の証明ではありません。Killing Floor © Tripwire Interactiveほか。画像の引用・権利範囲は[NOTICE](NOTICE.md#紹介画像)を参照。
+RetroRecast explores bringing new visuals to old games without replacing their gameplay. **Killing Floor (2009), or KF1, is the first and only demonstrated target.** The contribution is real-game integration on AMD hardware: a Direct3D 9 hook, same-frame inter-process communication (IPC), neural-output compositing and a supervised experimental runtime—not a new AI model or a finished graphics mod.
 
-## KF1 Playable Experimental Alpha
+<a name="demonstration"></a>
+## Demonstration
 
-[Pre-release / 実行パッケージ](https://github.com/zufall-upon/RetroRecast/releases/tag/v0.1.0-alpha) · [導入・停止・無効化・復元](QUICKSTART.md) · [Source / Build / CPU Tests](BUILDING.md) · [Known Issues](KNOWN_ISSUES.md)
+![KF1 church: original world input on the left; quantized CARLA2Flux output for the same request on the right](assets/church-input-output.png)
 
-> **重大な警告：Windows本体の異常再起動**
->
-> 過去のWindows試験中に、原因未確定のOS全体の異常再起動が複数回発生しました。**データ消失・ファイル破損の可能性があります。** 暗所・屋内の構造崩壊、性能低下も未解決です。検証したGPU以外は未検証です。常用PCでは実行せず、重要データを置かない独立した実験用環境に限定してください。警告・監督・復元手順はOS障害を防ぐ保証ではありません。**安定版・完成MODではありません。**
+**Actual saved input / output from a Windows experiment.** Left: KF1 world input. Right: quantized AI output for the **same request**. These are **not two final composited game screens**. Brightness and surfaces change substantially; structure and material fidelity are not guaranteed. This still does not demonstrate a fix for dark scenes or temporal stability. Killing Floor © Tripwire Interactive and other rights holders; [image attribution and scope](NOTICE.md#紹介画像).
 
-このAlphaは、独立した正規KF1コピーへD3D9 hookを配置し、同一フレームのGPU推論出力を合成する研究用入口です。画像変換だけのデモではありません。ゲーム本体・モデル・Python環境は含まれず、[利用者自身による公式取得](QUICKSTART.md)が必要です。オフライン・シングルプレイヤー・WestLondon・960×540の有限手動試験を対象にし、通常の完成MODの使い勝手を約束しません。
+<a name="gameplay"></a>
+## Gameplay — 60-second preview
 
-### 実証・今回の確認・未達を分ける
+<!-- gameplay-video -->
+[**▶ Watch / download the gameplay PV (MP4, 60 seconds, silent)**](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/RetroRecast-KF1-gameplay-preview.mp4)
+<!-- /gameplay-video -->
 
-| 区分 | 内容 |
+Edited **real KF1 gameplay recordings**, including experimental AI-rendered visuals—not fictional gameplay generated for this page. Visual artifacts and performance issues remain. The two source recordings have different viewpoints/equipment and unidentified processing conditions: this is **not a controlled before/after comparison, a continuous three-minute session, or a benchmark of the released model**. Video frame rate/resolution are not AI inference performance. The historical “private preview / in development” title remains in the preserved PV; it is now shared with the owner's authorization. [Video provenance, credits and rights](NOTICE.md#gameplay-video).
+
+<a name="download"></a>
+## Download & try
+
+> [!WARNING]
+> **Windows has unexpectedly rebooted during earlier experiments; the cause is unresolved. Data loss or file corruption is possible.** Dark/interior scene structure collapse and performance degradation remain. Do not run on a daily-use PC or a system containing important data. Other GPUs are unverified. **This repackaged configuration has not been re-tested on Windows/GPU/KF1, including ACLs and recovery after abnormal termination.** Supervision and recovery instructions do not guarantee safety. **This is a high-risk research Pre-release, not a stable release or finished mod.**
+
+| Get started | What you get |
 |---|---|
-| 既存実績 | Linux/Wine＋Radeonの描画統合、WindowsのGPU推論・同一frame IPC・KF1描画と本人操作の限定記録。Windows試験にはOS異常再起動と正常終了未達も含みます。 |
-| 今回のオフライン確認 | hook・atomic helper・smokeのソースからのcross-buildが既存実使用binaryとbyte一致。CPUの合成画素・IPC・通常フレーム経路・衝突拒否・停止/復元境界を検査。 |
-| 公開構成の変更 | 私有ゲーム画像を必要とした起動前oracleを、明示 `synthetic + measure` による自己整合性確認へ分離。導入のリンク拒否・復元receiptを追加。推論モデル・画素前後処理・実game側hook/chainは維持。 |
-| 未検証・未達 | **この再梱包構成のWindows実機・GPU・ゲーム・ACL・異常停止後の復元は再検証していません。** 暗所、画質/性能目標、時間安定、OS再起動原因は未解決。他GPU・他ゲーム対応は未実証です。 |
+| [**v0.1.0-alpha Pre-release**](https://github.com/zufall-upon/RetroRecast/releases/tag/v0.1.0-alpha) | [**Windows runtime ZIP**](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/RetroRecast-v0.1.0-alpha-windows.zip), [SHA256SUMS](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/SHA256SUMS), package manifest and corresponding source |
+| [**Requirements · install · stop · disable · restore**](QUICKSTART.md) | Detailed technical instructions are currently in Japanese. Read the risks first; offline single-player, dedicated game copy, finite manual WestLondon testing at 960×540 only. |
+| [**Source at the runtime tag**](https://github.com/zufall-upon/RetroRecast/tree/v0.1.0-alpha) · [build / CPU tests](BUILDING.md) | The automatic “Source code” archives are source-only, **not the executable ZIP**. Build and CPU-test entrypoints are provided. |
 
-CPU mockや配布hash一致は、新しい実機PASSや安全性の証明ではありません。Windows・追加ゲーム/GPU実験・録画の再試行は今回行っていません。[検証範囲](VALIDATION.md)と[配布対応表](release-manifest.json)に限定を残します。
+The game, model weights, Python/PyTorch/NumPy environment, FFmpeg and drivers are **not included**. Obtain them legitimately under their own terms. The recorded Windows environment used **RX 6950 XT / gfx1030 and TheRock/ROCm PyTorch**, not a general AMD compatibility promise. No automatic CPU, DirectML or other fallback is provided.
 
-## 何を再利用し、何を作ったか
+<a name="evidence"></a>
+## What is ours, and what is demonstrated?
 
-[REGEN / CARLA2Flux](https://github.com/stefanos50/REGEN) の既存generator・未改変FP32モデルを利用しています。本プロジェクトの作業はKF1の描画取り出し、同一frame IPC、合成、Windows監督と公開用入口の統合です。新モデル・新学習の成果ではありません。既存技術への帰属とファイル別条件は[NOTICE](NOTICE.md)・[LICENSE_SCOPE](LICENSE_SCOPE.md)に記載しています。
+| Layer | Scope |
+|---|---|
+| **Reused: [REGEN / CARLA2Flux](https://github.com/stefanos50/REGEN)** | Stefanos Pasios's generator and unmodified pretrained FP32 weights. Credit remains upstream; no new model or training is claimed. |
+| **RetroRecast integration** | KF1 D3D9 frame extraction, same-frame IPC between game and worker, output compositing, Windows process supervision, public source/build and recovery entrypoints. This is the project's contribution, not a claim of superiority over REGEN. |
+| **Limited historical demonstration** | Linux/Wine + Radeon RX 7900 XTX rendering/inference integration; Windows + RX 6950 XT GPU inference, same-frame KF1 display and owner-operated play records. Windows records also include abnormal OS reboots and incomplete clean shutdown. Not certification for all Radeon GPUs. |
+| **Offline release checks** | Cross-built hook/helper/smoke matched existing binaries byte-for-byte; CPU compositing/IPC and install/recovery boundary checks. Public packaging replaced the private-image startup oracle with explicit `synthetic + measure` self-consistency checks and added link rejection/recovery receipts. These are not hardware, image-quality or safety passes. |
+| **Unresolved / unverified** | Dark-scene structure, visual quality, temporal stability, performance targets and Windows reboot cause; other GPUs/games; the repackaged Windows/GPU/game/ACL/recovery path. No new game/GPU/Windows tests or recording retries were performed for this page. |
 
-## 試して、続きを作る
+[Validation scope](VALIDATION.md) · [known issues](KNOWN_ISSUES.md) · [release/source mapping](release-manifest.json) · [contribute](CONTRIBUTING.md). Technical documents beyond these three overview pages are currently Japanese.
 
-- **試す人**：[QUICKSTART](QUICKSTART.md)を最初から読み、Pre-releaseのruntime ZIPとSHA256SUMSを取得。ゲーム・重み・環境は自分で正規取得してください。
-- **改良する人**：[BUILDING](BUILDING.md)のCPUテストはゲーム・重み・GPU不要。Release ZIPにも対応sourceとbuild入口を含めています。
-- **参加する人**：[CONTRIBUTING](CONTRIBUTING.md)の少数課題から。暗所改善・他ゲーム対応・GPU最適化を達成済みと扱わず、観測条件を添えてください。
+## Credits & rights
 
-RetroRecastは広い研究の名前ですが、今回のAlphaの実証範囲はKF1だけです。Steam Workshop等への公開や汎用ゲーム対応はこのリリースに含めません。
+Killing Floor © Tripwire Interactive and other rights holders. Code: **GPL-3.0-or-later for the integration, with original component licenses retained**; see [NOTICE](NOTICE.md) and [LICENSE_SCOPE](LICENSE_SCOPE.md). Code, game footage/images, model weights, teacher/data and third-party dependencies have different rights: the code license does not relicense them. No game assets or weights are redistributed in the runtime. Not endorsed or supported by Tripwire, Valve, AMD, NVIDIA or the REGEN authors.
