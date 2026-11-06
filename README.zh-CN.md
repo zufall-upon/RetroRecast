@@ -4,7 +4,7 @@
 
 [English](README.md) · [日本語](README.ja.md) · **简体中文**
 
-[![Pre-release: v0.1.0-alpha](https://img.shields.io/badge/pre--release-v0.1.0--alpha-orange)](#download)
+[![Experimental Alpha: v0.1.0-alpha](https://img.shields.io/badge/Experimental_Alpha-v0.1.0--alpha-orange)](#download)
 [![AMD Radeon: limited proof of concept](https://img.shields.io/badge/AMD_Radeon-limited_PoC-ED1C24)](#evidence)
 [![First target: Killing Floor 2009](https://img.shields.io/badge/first_target-Killing_Floor_2009-blue)](#demonstration)
 [![Code: GPL-3.0-or-later and component licenses](https://img.shields.io/badge/code-GPL--3.0--or--later-617C42)](LICENSE_SCOPE.md)
@@ -36,15 +36,15 @@ https://github.com/user-attachments/assets/795368ae-fec0-4f0c-b331-bb530b4d1fe4
 ## 下载与尝试
 
 > [!WARNING]
-> **此前实验期间曾发生Windows系统异常重启，原因尚未解决，可能导致数据丢失或文件损坏。** 暗处、室内结构崩坏以及性能下降问题仍然存在。请勿在日常使用或存有重要数据的电脑上运行。其他GPU尚未验证。**本次重新打包配置尚未在Windows/GPU/KF1实机上重新验证，包括ACL及异常终止后的恢复。** 监督和恢复步骤不保证安全。**这是高风险研究用Pre-release，不是稳定版或完成的MOD。**
+> **此前实验期间曾发生Windows系统异常重启，原因尚未解决，可能导致数据丢失或文件损坏。** 暗处、室内结构崩坏以及性能下降问题仍然存在。请勿在日常使用或存有重要数据的电脑上运行。其他GPU尚未验证。**本次重新打包配置尚未在Windows/GPU/KF1实机上重新验证，包括ACL及异常终止后的恢复。** 监督和恢复步骤不保证安全。**这是高风险研究用Experimental Alpha，不是稳定版或完成的MOD。**
 
 | 入口 | 内容 |
 |---|---|
-| [**v0.1.0-alpha Pre-release**](https://github.com/zufall-upon/RetroRecast/releases/tag/v0.1.0-alpha) | [**Windows可执行ZIP**](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/RetroRecast-v0.1.0-alpha-windows.zip)、[SHA256SUMS](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/SHA256SUMS)、manifest及对应源码 |
+| [**v0.1.0-alpha Experimental Alpha**](https://github.com/zufall-upon/RetroRecast/releases/tag/v0.1.0-alpha) | [**Windows可执行ZIP**](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/RetroRecast-v0.1.0-alpha-windows.zip)、[SHA256SUMS](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/SHA256SUMS)、manifest及对应源码 |
 | [**环境要求 · 安装 · 停止 · 禁用 · 恢复（英语）**](QUICKSTART.md) · [日语](QUICKSTART.ja.md) | 请先阅读风险。仅面向离线单人、独立游戏副本、WestLondon、960×540的有限手动实验。 |
 | [**runtime标签对应源码**](https://github.com/zufall-upon/RetroRecast/tree/v0.1.0-alpha) · [构建 / CPU测试（英语）](BUILDING.md) · [日语](BUILDING.ja.md) | GitHub自动生成的“Source code”归档只有源码，**不等同于可执行ZIP**。 |
 
-**不包含**游戏、模型权重、Python/PyTorch/NumPy环境、FFmpeg或驱动，需按各自条件合法取得。既有Windows记录使用**RX 6950 XT / gfx1030、TheRock/ROCm PyTorch**，不代表对所有AMD硬件的兼容承诺。不提供CPU、DirectML等自动fallback。
+为使Experimental Alpha显示在标准Releases栏，GitHub上的Pre-release标记已关闭；这不表示稳定或安全。**不包含**游戏、模型权重、Python/PyTorch/NumPy环境、FFmpeg或驱动，需按各自条件合法取得。既有Windows记录使用**RX 6950 XT / gfx1030、TheRock/ROCm PyTorch**，不代表对所有AMD硬件的兼容承诺。不提供CPU、DirectML等自动fallback。
 
 ## 参与改进
 

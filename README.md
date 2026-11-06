@@ -4,7 +4,7 @@
 
 **English** · [日本語](README.ja.md) · [简体中文](README.zh-CN.md)
 
-[![Pre-release: v0.1.0-alpha](https://img.shields.io/badge/pre--release-v0.1.0--alpha-orange)](#download)
+[![Experimental Alpha: v0.1.0-alpha](https://img.shields.io/badge/Experimental_Alpha-v0.1.0--alpha-orange)](#download)
 [![AMD Radeon: limited proof of concept](https://img.shields.io/badge/AMD_Radeon-limited_PoC-ED1C24)](#evidence)
 [![First target: Killing Floor 2009](https://img.shields.io/badge/first_target-Killing_Floor_2009-blue)](#demonstration)
 [![Code: GPL-3.0-or-later and component licenses](https://img.shields.io/badge/code-GPL--3.0--or--later-617C42)](LICENSE_SCOPE.md)
@@ -36,15 +36,15 @@ Edited **real KF1 gameplay recordings**, including experimental AI-rendered visu
 ## Download & try
 
 > [!WARNING]
-> **Windows has unexpectedly rebooted during earlier experiments; the cause is unresolved. Data loss or file corruption is possible.** Dark/interior scene structure collapse and performance degradation remain. Do not run on a daily-use PC or a system containing important data. Other GPUs are unverified. **This repackaged configuration has not been re-tested on Windows/GPU/KF1, including ACLs and recovery after abnormal termination.** Supervision and recovery instructions do not guarantee safety. **This is a high-risk research Pre-release, not a stable release or finished mod.**
+> **Windows has unexpectedly rebooted during earlier experiments; the cause is unresolved. Data loss or file corruption is possible.** Dark/interior scene structure collapse and performance degradation remain. Do not run on a daily-use PC or a system containing important data. Other GPUs are unverified. **This repackaged configuration has not been re-tested on Windows/GPU/KF1, including ACLs and recovery after abnormal termination.** Supervision and recovery instructions do not guarantee safety. **This is a high-risk research Experimental Alpha, not a stable release or finished mod.**
 
 | Get started | What you get |
 |---|---|
-| [**v0.1.0-alpha Pre-release**](https://github.com/zufall-upon/RetroRecast/releases/tag/v0.1.0-alpha) | [**Windows runtime ZIP**](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/RetroRecast-v0.1.0-alpha-windows.zip), [SHA256SUMS](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/SHA256SUMS), package manifest and corresponding source |
+| [**v0.1.0-alpha Experimental Alpha**](https://github.com/zufall-upon/RetroRecast/releases/tag/v0.1.0-alpha) | [**Windows runtime ZIP**](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/RetroRecast-v0.1.0-alpha-windows.zip), [SHA256SUMS](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/SHA256SUMS), package manifest and corresponding source |
 | [**Requirements · install · stop · disable · restore**](QUICKSTART.md) | English instructions; [Japanese](QUICKSTART.ja.md) is also available. Read the risks first; offline single-player, dedicated game copy, finite manual WestLondon testing at 960×540 only. |
 | [**Source at the runtime tag**](https://github.com/zufall-upon/RetroRecast/tree/v0.1.0-alpha) · [build / CPU tests](BUILDING.md) | The automatic “Source code” archives are source-only, **not the executable ZIP**. Build and CPU-test entrypoints are provided. |
 
-The game, model weights, Python/PyTorch/NumPy environment, FFmpeg and drivers are **not included**. Obtain them legitimately under their own terms. The recorded Windows environment used **RX 6950 XT / gfx1030 and TheRock/ROCm PyTorch**, not a general AMD compatibility promise. No automatic CPU, DirectML or other fallback is provided.
+GitHub's Pre-release flag is disabled so this Experimental Alpha appears in the standard Releases section; that classification does not mean it is stable or safe. The game, model weights, Python/PyTorch/NumPy environment, FFmpeg and drivers are **not included**. Obtain them legitimately under their own terms. The recorded Windows environment used **RX 6950 XT / gfx1030 and TheRock/ROCm PyTorch**, not a general AMD compatibility promise. No automatic CPU, DirectML or other fallback is provided.
 
 ## Help improve RetroRecast
 

@@ -36,6 +36,8 @@ $env:HIP_VISIBLE_DEVICES = "<確認したdGPU index>"
 
 独立したコピーの `System` と、まだ存在しないゲーム外の実行directoryを指定します。`<...>`は各自のpathへ置換してください。dry-runはコピー・起動・GPU検査を行いません。
 
+コピーには `System/KillingFloor.exe` と `Maps/KF-WestLondon.rom` が必要です。run directoryはゲームコピーと展開packageの外（ゲームコピーの親でもない場所）に置き、親directoryは事前に存在させます。ゲームとrunのvolumeには2 GiBの空き容量下限と512 MiBの余裕が必要です。`slot.bin` のrun pathはASCIIにしてください。
+
 ```text
 python -B scripts/dry_run.py --system <KF1-copy/System> --run-dir <new-run-directory>
 ```
@@ -46,6 +48,8 @@ python -B scripts/dry_run.py --system <KF1-copy/System> --run-dir <new-run-direc
 
 1. 同梱hook/helper/smoke/chain、公式取得した固定hash重み、FFmpegを使います。sourceからビルドする場合は[BUILDING](BUILDING.ja.md)へ。モデル・依存の取得条件を満たせない場合は進めません。GPU選択を確認し、他GPUへの対応を約束しません。
 2. GPUを使用する次の比較は合成入力での自己整合性確認です。過去のゲーム由来参照と同じ画質比較ではありません。出力先は新規directoryです。
+
+smokeのrun directoryは展開packageの外に置き、そのvolumeにも2 GiBの下限と512 MiBの余裕が必要です。
 
 ```text
 python -B runtime/worker/stage.py compare --model <weights> --output-dir <new-comparison> --reference-mode synthetic --comparison-mode measure

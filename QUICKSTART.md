@@ -36,7 +36,7 @@ This setting applies to the current shell and child processes. Close the dedicat
 
 ## Check for conflicts first
 
-Specify the `System` directory in the separate copy and a not-yet-existing run directory outside the game. Replace `<...>` with your paths. The dry run does not copy, launch or check the GPU:
+Specify the `System` directory in the separate copy and a not-yet-existing run directory outside both the game copy and extracted package (not an ancestor of the game copy either). The copy must contain `System/KillingFloor.exe` and `Maps/KF-WestLondon.rom`. The run directory's parent must exist; the game and run volumes need the script's 2 GiB free-space floor plus a 512 MiB margin. The run path for `slot.bin` must be ASCII. Replace `<...>` with your paths. The dry run does not copy, launch or check the GPU:
 
 ```text
 python -B scripts/dry_run.py --system <KF1-copy/System> --run-dir <new-run-directory>
@@ -47,7 +47,7 @@ Existing hook, markers or IPC cause refusal, not overwrite; symlink or reparse-p
 ## Experimental execution entrypoint
 
 1. Use the included hook/helper/smoke/chain, officially obtained fixed-hash weights and your FFmpeg. For source builds see [BUILDING](BUILDING.md). Do not proceed if the conditions for the model or dependencies are unmet. Confirm the GPU selection; other GPUs are not promised to work.
-2. The following GPU comparison is a synthetic-input self-consistency check, **not** the historical game-image quality comparison. Use new output directories:
+2. The following GPU comparison is a synthetic-input self-consistency check, **not** the historical game-image quality comparison. Use new output directories; the smoke run directory must be outside the extracted package and its volume needs the same 2 GiB floor plus 512 MiB margin:
 
 ```text
 python -B runtime/worker/stage.py compare --model <weights> --output-dir <new-comparison> --reference-mode synthetic --comparison-mode measure
