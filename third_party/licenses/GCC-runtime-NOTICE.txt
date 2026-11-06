@@ -1,0 +1,13 @@
+GCC runtime / libstdc++
+
+Copyright (C) 2001-2024 Free Software Foundation, Inc.
+
+The runtime is distributed under the GNU General Public License version 3
+or later, with the GCC Runtime Library Exception version 3.1. See
+GCC-GPL-3.txt and GCC-runtime-exception.txt in this directory.
+
+Upstream notice example for the exception allocation runtime:
+https://github.com/gcc-mirror/gcc/blob/releases/gcc-14/libstdc++-v3/libsupc++/eh_alloc.cc
+
+The unchanged Proton DXVK binary contains GCC 13-win32 and 14-win32 build
+identifiers. This notice does not claim that RetroRecast rebuilt DXVK.

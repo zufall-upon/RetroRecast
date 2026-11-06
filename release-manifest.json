@@ -1,0 +1,21 @@
+{
+  "status": "experimental-alpha-candidate; new Windows runtime not verified",
+  "release_tag": "v0.1.0-alpha",
+  "hook_source_variant": "200-second-manual-boundary",
+  "prior_windows_hook_sha256": "4096f1f380cb346f2418105b5b4b1617e7b71a5be49e1e38520bfe1da6b1486f",
+  "prior_windows_atomic_helper_sha256": "43ff50ab95eb10c2b7fcbcde37a33c4d00adfa327307ca8befda8824376c2cba",
+  "prior_windows_chain_sha256": "70571734e0758c9791f46d5b0d26a0cc0dd110e07093b5e82f6069da3fd4a2bc",
+  "required_weight_sha256": "0fbb08561b71ad759c4503a77233497f06c7b168ba8eaf023a35b214d71af254",
+  "binary_in_repository": false,
+  "chain_and_weights_included": false,
+  "public_fixture": "synthetic-bgra-v1; self-consistency only, not historical quality comparison",
+  "candidate_windows_gpu_game_or_recovery_tested": false,
+  "chain_embedded_revision": "a78a467cadb22bee928904290cf8e7921b121851",
+  "main_visual": {
+    "file": "assets/church-input-output.png",
+    "sha256": "0ad8b33f3a626dde442955a2566dc9eba6d66e330cbdb1e4549f10e4fb57d65c",
+    "kind": "same-request world input / quantized AI output, NOT final gameplay comparison"
+  },
+  "distribution": "Runtime ZIP includes sources, hook, helper, smoke and unchanged DXVK chain; model/game/environments excluded.",
+  "validation_limits": "CPU/offline and cross-build only; not a new Windows/GPU/game/safety PASS"
+}

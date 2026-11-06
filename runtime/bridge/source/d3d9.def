@@ -1,0 +1,12 @@
+LIBRARY d3d9
+EXPORTS
+ Direct3DCreate9=ShadowDirect3DCreate9@4 @37
+ Direct3DCreate9Ex=ShadowDirect3DCreate9Ex@8 @38
+ D3DPERF_BeginEvent=D3DPERF_BeginEvent@8 @27
+ D3DPERF_EndEvent=D3DPERF_EndEvent@0 @28
+ D3DPERF_GetStatus=D3DPERF_GetStatus@0 @29
+ D3DPERF_QueryRepeatFrame=D3DPERF_QueryRepeatFrame@0 @30
+ D3DPERF_SetMarker=D3DPERF_SetMarker@8 @31
+ D3DPERF_SetOptions=D3DPERF_SetOptions@4 @32
+ D3DPERF_SetRegion=D3DPERF_SetRegion@8 @33
+ Direct3D9EnableMaximizedWindowedModeShim=Direct3D9EnableMaximizedWindowedModeShim@4 @36
