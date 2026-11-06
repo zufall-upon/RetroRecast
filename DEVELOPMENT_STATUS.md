@@ -39,7 +39,7 @@ The priorities below indicate **importance, not implementation order**. Do not r
 [Issue #4: Improve synthetic frame-contract regression tests](https://github.com/zufall-upon/RetroRecast/issues/4)
 
 - **Symptom / gap:** CPU checks cover important boundaries but are not exhaustive; stronger coverage can catch integration regressions without real-game data. This is a testing gap, not an identified new runtime failure.
-- **Evidence:** [`ProceduralFrameContract`](tests/test_public_contract.py) already checks color conversion/padding, sequence error publication, a synthetic startup oracle, later live-frame sequence reset, missing references and comparison integrity. [Validation](VALIDATION.md#checks-performed-for-the-release) states the scope.
+- **Evidence:** [`ProceduralFrameContract`](tests/test_public_contract.py) already checks color conversion/padding, sequence error publication, a synthetic startup oracle, later live-frame sequence reset, missing references and comparison integrity. Its service test checks that a call retains the modes captured at start even if the arguments change later. [Validation](VALIDATION.md#checks-performed-for-the-release) states the scope.
 - **Unknown:** Additional edge cases and which will reveal a defect remain to be established. CPU mocks do not validate GPU inference, visual quality or actual Windows behavior.
 - **Public code:** [core](runtime/worker/core.py), [slot](runtime/worker/slot.py), [stage](runtime/worker/stage.py), [tests](tests/test_public_contract.py).
 - **Safe next work:** Add a focused deterministic synthetic regression for a real contract boundary, asserting result, error and state; use the existing CPU suite. Do not require a game, weights, GPU or private fixture.

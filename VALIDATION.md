@@ -7,7 +7,7 @@ Of 56 payloads in the historical Windows runtime, 54 matched the original stage 
 ## Checks performed for the release
 
 - Pinned the public C++ include closure and build configuration. Cross-built hook/helper/smoke with LLVM-Mingw clang 23.1.4 and matched the historical binaries byte-for-byte; did not run them on Windows.
-- CPU synthetic tests without model or game: BGRA/RGB, vertical padding, raw quantization, slot sequence/error, normal paths for two different frames after the startup oracle, controller ownership ordering, conflict refusal, recovery dry runs and changed-file refusal.
+- CPU synthetic tests without model or game: BGRA/RGB, vertical padding, raw quantization, slot sequence/error, normal paths for two subsequent frames using input different from the startup oracle, controller ownership ordering, conflict refusal, recovery dry runs and changed-file refusal.
 - At release creation, checked all payloads/hashes, excluded assets, source commit correspondence and CPU tests after extraction. None proves game success or safety.
 
 | Artifact | SHA-256 |
