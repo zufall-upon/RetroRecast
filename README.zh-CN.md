@@ -41,10 +41,14 @@ https://github.com/user-attachments/assets/795368ae-fec0-4f0c-b331-bb530b4d1fe4
 | 入口 | 内容 |
 |---|---|
 | [**v0.1.0-alpha Pre-release**](https://github.com/zufall-upon/RetroRecast/releases/tag/v0.1.0-alpha) | [**Windows可执行ZIP**](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/RetroRecast-v0.1.0-alpha-windows.zip)、[SHA256SUMS](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/SHA256SUMS)、manifest及对应源码 |
-| [**环境要求 · 安装 · 停止 · 禁用 · 恢复**](QUICKSTART.md) | 详细技术步骤目前为日语，请先阅读风险。仅面向离线单人、独立游戏副本、WestLondon、960×540的有限手动实验。 |
-| [**runtime标签对应源码**](https://github.com/zufall-upon/RetroRecast/tree/v0.1.0-alpha) · [构建 / CPU测试](BUILDING.md) | GitHub自动生成的“Source code”归档只有源码，**不等同于可执行ZIP**。 |
+| [**环境要求 · 安装 · 停止 · 禁用 · 恢复（英语）**](QUICKSTART.md) · [日语](QUICKSTART.ja.md) | 请先阅读风险。仅面向离线单人、独立游戏副本、WestLondon、960×540的有限手动实验。 |
+| [**runtime标签对应源码**](https://github.com/zufall-upon/RetroRecast/tree/v0.1.0-alpha) · [构建 / CPU测试（英语）](BUILDING.md) · [日语](BUILDING.ja.md) | GitHub自动生成的“Source code”归档只有源码，**不等同于可执行ZIP**。 |
 
 **不包含**游戏、模型权重、Python/PyTorch/NumPy环境、FFmpeg或驱动，需按各自条件合法取得。既有Windows记录使用**RX 6950 XT / gfx1030、TheRock/ROCm PyTorch**，不代表对所有AMD硬件的兼容承诺。不提供CPU、DirectML等自动fallback。
+
+## 参与改进
+
+[开发状态与未解决问题](DEVELOPMENT_STATUS.md) · [Issues](https://github.com/zufall-upon/RetroRecast/issues) · [参与指南](CONTRIBUTING.md)（均为英语）。优先级表示重要性而非入手顺序；CPU合成帧契约测试是更安全的首次贡献。不要求重现系统重启或提供私有资源。
 
 <a name="evidence"></a>
 ## 复用了什么，验证了什么？
@@ -57,7 +61,7 @@ https://github.com/user-attachments/assets/795368ae-fec0-4f0c-b331-bb530b4d1fe4
 | **发布时的离线检查** | 交叉构建的hook/helper/smoke与原二进制逐字节一致；检查CPU合成/IPC及安装恢复边界。公开版本将私有图片启动oracle改为显式 `synthetic + measure` 自洽检查，并增加链接拒绝和恢复receipt。这些不证明实机、画质或安全合格。 |
 | **未解决 / 未验证** | 暗处结构、画质、时间稳定性、性能目标、Windows重启原因；其他GPU/游戏；重新打包后的Windows/GPU/game/ACL/恢复路径。本次页面整理未进行额外游戏/GPU/Windows测试或重新录制。 |
 
-[验证范围](VALIDATION.md) · [已知问题](KNOWN_ISSUES.md) · [发布/源码对应](release-manifest.json) · [参与开发](CONTRIBUTING.md)。除这三份概览外，技术文档目前为日语。
+[验证范围](VALIDATION.md) · [已知问题](KNOWN_ISSUES.md) · [发布/源码对应](release-manifest.json) · [参与开发](CONTRIBUTING.md)（英语）。安装与构建指南提供英语和日语；其他部分技术及许可证文档仍为日语。
 
 ## 致谢与权利
 

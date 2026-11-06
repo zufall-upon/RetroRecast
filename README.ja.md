@@ -9,7 +9,7 @@
 [![First target: Killing Floor 2009](https://img.shields.io/badge/first_target-Killing_Floor_2009-blue)](#demonstration)
 [![Code: GPL-3.0-or-later and component licenses](https://img.shields.io/badge/code-GPL--3.0--or--later-617C42)](LICENSE_SCOPE.md)
 
-[**実プレイ動画**](#gameplay) · [**ALPHAを取得**](#download) · [**SOURCE / BUILD**](BUILDING.md) · [**既知の問題**](KNOWN_ISSUES.md)
+[**実プレイ動画**](#gameplay) · [**ALPHAを取得**](#download) · [**SOURCE / BUILD**](BUILDING.ja.md) · [**既知の問題（英語）**](KNOWN_ISSUES.md)
 
 昔のゲームを、元の遊びを残したまま新しい映像へ。**最初かつ唯一の実証対象はKilling Floor (2009)、KF1です。** 独自の取り組みはAMD実機でのゲーム統合：Direct3D 9 hook、同一フレームのプロセス間通信（IPC）、AI出力の合成、監督付き実験runtimeです。新しいAIモデルの開発や完成MODではありません。
 
@@ -41,10 +41,14 @@ https://github.com/user-attachments/assets/795368ae-fec0-4f0c-b331-bb530b4d1fe4
 | 入口 | 内容 |
 |---|---|
 | [**v0.1.0-alpha Pre-release**](https://github.com/zufall-upon/RetroRecast/releases/tag/v0.1.0-alpha) | [**Windows実行ZIP**](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/RetroRecast-v0.1.0-alpha-windows.zip)、[SHA256SUMS](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/SHA256SUMS)、manifestと対応source |
-| [**必要環境・導入・停止・無効化・復元**](QUICKSTART.md) | 警告から通読してください。オフライン・シングルプレイヤー、独立ゲームコピー、WestLondon・960×540の有限手動試験に限定。 |
-| [**runtimeタグのsource**](https://github.com/zufall-upon/RetroRecast/tree/v0.1.0-alpha) · [build / CPU tests](BUILDING.md) | GitHub自動生成の「Source code」はsource-only。**実行ZIPとは別物**です。 |
+| [**必要環境・導入・停止・無効化・復元（日本語）**](QUICKSTART.ja.md) | 警告から通読してください。オフライン・シングルプレイヤー、独立ゲームコピー、WestLondon・960×540の有限手動試験に限定。 |
+| [**runtimeタグのsource**](https://github.com/zufall-upon/RetroRecast/tree/v0.1.0-alpha) · [build / CPU tests（日本語）](BUILDING.ja.md) | GitHub自動生成の「Source code」はsource-only。**実行ZIPとは別物**です。 |
 
 ゲーム・モデル重み・Python/PyTorch/NumPy環境・FFmpeg・driverは**非同梱**で、各条件に従う正規取得が必要です。Windows既存実績は**RX 6950 XT / gfx1030、TheRock/ROCm PyTorch**の限定環境で、AMD全般の互換保証ではありません。CPU・DirectML等へ自動fallbackしません。
+
+## 改善への参加
+
+[開発状況・未解決課題](DEVELOPMENT_STATUS.md) · [Issues](https://github.com/zufall-upon/RetroRecast/issues) · [参加案内](CONTRIBUTING.md)（いずれも英語）。優先度は重要度であり着手順ではありません。最初はCPUの合成frame契約テストが比較的安全です。OS再起動の再現や私有資産を参加条件にしません。
 
 <a name="evidence"></a>
 ## 何を再利用し、何を実証したか
@@ -57,7 +61,7 @@ https://github.com/user-attachments/assets/795368ae-fec0-4f0c-b331-bb530b4d1fe4
 | **公開時のオフライン確認** | hook/helper/smokeのcross-buildが既存binaryとbyte一致。CPU合成/IPC・導入復元境界を検査。公開用には私有画像の起動前oracleを明示 `synthetic + measure` の自己整合性確認に分離し、リンク拒否・復元receiptを追加。実機・画質・安全の合格ではありません。 |
 | **未解決・未検証** | 暗所構造、画質、時間安定、性能目標、Windows再起動原因。他GPU・他ゲーム、再梱包後のWindows/GPU/game/ACL/復元経路。今回のページ整備では追加ゲーム/GPU/Windows試験・録画再試行はしていません。 |
 
-[検証範囲](VALIDATION.md) · [既知の問題](KNOWN_ISSUES.md) · [配布/source対応](release-manifest.json) · [開発参加](CONTRIBUTING.md)。概要3ページ以外の技術文書は現在日本語です。
+[検証範囲](VALIDATION.md) · [既知の問題](KNOWN_ISSUES.md) · [配布/source対応](release-manifest.json) · [開発参加](CONTRIBUTING.md)（英語）。導入・ビルド手順は日英で提供し、その他の技術・権利文書には日本語のものもあります。
 
 ## 謝辞・権利
 

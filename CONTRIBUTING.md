@@ -1,11 +1,13 @@
-# 参加の入口
+# Contributing
 
-まず[BUILDING](BUILDING.md)のCPU合成契約テストを確認してください。[LICENSE_SCOPE](LICENSE_SCOPE.md)の条件でsourceを改変し、目的・変更内容・対象テストの結果を添えてPRを送れます。ゲームやモデルなしで取り組める最初の課題は次の3つです。
+Start with [Development Status](DEVELOPMENT_STATUS.md) and its [tracked issues](https://github.com/zufall-upon/RetroRecast/issues). It separates observed evidence from unknowns and proposes safe next steps and completion criteria. Priority reflects importance, **not** suggested order of first contributions. The synthetic CPU frame-contract issue is a safer first PR than a Windows or image-quality experiment.
 
-1. **合成frame契約**：色順・pad・sequence・失敗通知の小さな回帰テストを追加する。`tests/test_public_contract.py` が入口です。
-2. **導入・復元境界**：既存fileを保つ衝突拒否やdry-runのエラーメッセージ/テストを改善する。OS再起動を安全とする課題ではありません。
-3. **build再現性**：公開sourceからx86 hook/x64 helperを再buildし、compiler/flags/hash差を報告する。ゲーム・モデル不要です。
+Read the [BUILDING](BUILDING.md) CPU synthetic contract checks and [LICENSE_SCOPE](LICENSE_SCOPE.md). A PR should explain its purpose, changes and relevant test results. Work that can start without game or model includes:
 
-私有fixtureを必須にする参加課題は作りません。暗所の構造保持は難しい未解決の研究課題で、good first issue扱いや改善の約束はしません。追加ゲーム/GPU実験を参加の前提にせず、静的検討・CPUテスト・buildから始められます。
+1. **Synthetic frame contract:** small regressions for channel order, padding, sequence or failure reporting; start with [`tests/test_public_contract.py`](tests/test_public_contract.py).
+2. **Installation/recovery boundaries:** improve conflict refusal, dry-run diagnostics or tests that preserve existing files. This does not make OS reboots safe.
+3. **Build reproducibility:** rebuild the x86 hook/x64 helper from public source with existing tools and report compiler, flags and hash differences; no game or model needed.
 
-問題報告では秘密・ゲームdata・ローカル絶対pathを公開しないでください。暗所の構造保持は未解決の研究課題であり、改善済みではありません。Windows再起動等の安全性は未解決で、再現実験を要求しません。
+Do not make private fixtures mandatory for an easy participation task. Dark-scene structural fidelity is unresolved research, not a good-first-issue promise or a completed improvement. Additional game/GPU experiments are not a prerequisite for contributing: begin with static review, CPU tests or builds. Do not ask contributors to reproduce an OS reboot.
+
+Do not post secrets, game data or local absolute paths in reports. Windows restart safety remains unresolved; see [known issues](KNOWN_ISSUES.md) and [validation scope](VALIDATION.md).

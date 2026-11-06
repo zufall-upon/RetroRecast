@@ -1,10 +1,12 @@
-# 既知の重大問題・未検証事項
+# Serious known issues and unverified areas
 
-- Windows試験中、原因未確定のOS全体の異常再起動が複数回発生。データ消失・ファイル破損の可能性があります。停止・警告は安全性を保証しません。
-- 暗所・屋内では構造や進行方向が崩れることがあります。保存教会の入力とAI出力には明るさ・構造の大きな変化がありましたが、本人が報告した地下室と同一場面かは不明です。
-- 推論やフレーム待ちにより性能が低下します。改善・規定FPS達成は主張しません。
-- 実験GPU以外は未検証。各種driver、互換性、長時間安定は未保証です。
-- この候補の合成fixture/復旧receiptは過去のWindowsプレイ時とは別。CPU mockとcross-buildのみで、新候補のWindows/GPU/KF1/停止復元は未検証です。
-- モデル・ゲーム・Python/GPU環境・FFmpegは非同梱。公式取得と利用者自身の利用権が必要です。コードlicenseを重み・画像に拡張しません。chainと部品別条件はNOTICEを参照。
-- crash直後にreceiptがない場合、自動で所有DLLを特定して削除できません。receiptがあっても同時変更、Windows ACL、急停止での完全復元は保証しません。ログ・IPC・markerは残ります。
-- 録画は異常停止で再生不能になり得ます。新しい録画・ゲーム/GPU試験は行っていません。
+- Multiple unexpected Windows system reboots occurred during testing, cause unknown. Data loss or file corruption is possible. Warnings and stopping procedures do not guarantee safety.
+- Dark/interior scenes can lose structure or direction. The saved church input and AI output show large brightness and structural changes, but it is unknown whether this is the same scene as the owner's reported basement.
+- Inference and frame waits degrade performance. No improvement or target frame rate is claimed.
+- GPUs other than those in the experiments are unverified; driver compatibility and long-term stability are not guaranteed.
+- This candidate's synthetic fixture and recovery receipt differ from those used in historical Windows play. CPU mocks and cross-builds do not verify the new candidate on Windows/GPU/KF1 or its stop/recovery path.
+- Model, game, Python/GPU environment and FFmpeg are not included. Obtain them through official sources with your own rights. The code license does not extend to weights or images; see [NOTICE](NOTICE.md) for the chain and component terms.
+- Without a receipt after a crash, owned DLLs cannot be automatically identified and removed. Even with a receipt, concurrent changes, Windows ACLs and sudden termination can prevent complete restoration. Logs, IPC and markers remain.
+- Recordings may be unplayable after abnormal termination. No new recording or game/GPU tests were performed.
+
+See [Development Status](DEVELOPMENT_STATUS.md) for open work, evidence, unknowns and safe ways to contribute.

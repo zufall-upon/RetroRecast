@@ -41,10 +41,14 @@ Edited **real KF1 gameplay recordings**, including experimental AI-rendered visu
 | Get started | What you get |
 |---|---|
 | [**v0.1.0-alpha Pre-release**](https://github.com/zufall-upon/RetroRecast/releases/tag/v0.1.0-alpha) | [**Windows runtime ZIP**](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/RetroRecast-v0.1.0-alpha-windows.zip), [SHA256SUMS](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/SHA256SUMS), package manifest and corresponding source |
-| [**Requirements · install · stop · disable · restore**](QUICKSTART.md) | Detailed technical instructions are currently in Japanese. Read the risks first; offline single-player, dedicated game copy, finite manual WestLondon testing at 960×540 only. |
+| [**Requirements · install · stop · disable · restore**](QUICKSTART.md) | English instructions; [Japanese](QUICKSTART.ja.md) is also available. Read the risks first; offline single-player, dedicated game copy, finite manual WestLondon testing at 960×540 only. |
 | [**Source at the runtime tag**](https://github.com/zufall-upon/RetroRecast/tree/v0.1.0-alpha) · [build / CPU tests](BUILDING.md) | The automatic “Source code” archives are source-only, **not the executable ZIP**. Build and CPU-test entrypoints are provided. |
 
 The game, model weights, Python/PyTorch/NumPy environment, FFmpeg and drivers are **not included**. Obtain them legitimately under their own terms. The recorded Windows environment used **RX 6950 XT / gfx1030 and TheRock/ROCm PyTorch**, not a general AMD compatibility promise. No automatic CPU, DirectML or other fallback is provided.
+
+## Help improve RetroRecast
+
+[Development Status & open problems](DEVELOPMENT_STATUS.md) · [Issues](https://github.com/zufall-upon/RetroRecast/issues) · [Contributing](CONTRIBUTING.md). Priorities describe importance, not first-PR order: CPU frame-contract tests are the safer starting point. Do not reproduce OS reboots or require private assets to participate.
 
 <a name="evidence"></a>
 ## What is ours, and what is demonstrated?
@@ -57,7 +61,7 @@ The game, model weights, Python/PyTorch/NumPy environment, FFmpeg and drivers ar
 | **Offline release checks** | Cross-built hook/helper/smoke matched existing binaries byte-for-byte; CPU compositing/IPC and install/recovery boundary checks. Public packaging replaced the private-image startup oracle with explicit `synthetic + measure` self-consistency checks and added link rejection/recovery receipts. These are not hardware, image-quality or safety passes. |
 | **Unresolved / unverified** | Dark-scene structure, visual quality, temporal stability, performance targets and Windows reboot cause; other GPUs/games; the repackaged Windows/GPU/game/ACL/recovery path. No new game/GPU/Windows tests or recording retries were performed for this page. |
 
-[Validation scope](VALIDATION.md) · [known issues](KNOWN_ISSUES.md) · [release/source mapping](release-manifest.json) · [contribute](CONTRIBUTING.md). Technical documents beyond these three overview pages are currently Japanese.
+[Validation scope](VALIDATION.md) · [known issues](KNOWN_ISSUES.md) · [release/source mapping](release-manifest.json) · [contribute](CONTRIBUTING.md). Quick Start and Build are available in English and Japanese; some other technical and licensing documents remain in Japanese.
 
 ## Credits & rights
 
