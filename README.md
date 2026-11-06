@@ -24,6 +24,9 @@ RetroRecast explores bringing new visuals to old games without replacing their g
 ## Gameplay — 60-second preview
 
 <!-- gameplay-video -->
+
+https://github.com/user-attachments/assets/795368ae-fec0-4f0c-b331-bb530b4d1fe4
+
 [**▶ Watch / download the gameplay PV (MP4, 60 seconds, silent)**](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/RetroRecast-KF1-gameplay-preview.mp4)
 <!-- /gameplay-video -->
 

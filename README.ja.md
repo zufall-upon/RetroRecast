@@ -24,6 +24,9 @@
 ## 実プレイ動画 — 60秒PV
 
 <!-- gameplay-video -->
+
+https://github.com/user-attachments/assets/795368ae-fec0-4f0c-b331-bb530b4d1fe4
+
 [**▶ 実プレイPVを視聴・取得（MP4、60秒、無音）**](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/RetroRecast-KF1-gameplay-preview.mp4)
 <!-- /gameplay-video -->
 

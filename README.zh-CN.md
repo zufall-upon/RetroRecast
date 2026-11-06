@@ -24,6 +24,9 @@ RetroRecast探索在保留原有玩法的同时，为老游戏带来新的画面
 ## 游戏演示 — 60秒PV
 
 <!-- gameplay-video -->
+
+https://github.com/user-attachments/assets/795368ae-fec0-4f0c-b331-bb530b4d1fe4
+
 [**▶ 观看 / 下载游戏PV（MP4，60秒，无声）**](https://github.com/zufall-upon/RetroRecast/releases/download/v0.1.0-alpha/RetroRecast-KF1-gameplay-preview.mp4)
 <!-- /gameplay-video -->
 
